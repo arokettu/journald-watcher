@@ -1,4 +1,10 @@
+# config
+config/config.yml
+
 # ide
 *.iml
 *.ipr
 *.iws
+
+# daemons
+*.pid

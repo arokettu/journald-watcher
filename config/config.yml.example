@@ -1,0 +1,26 @@
+# [optional]
+# *flags* is systemd-journal flags
+# a combination of local, runtime, system
+#   local: Only open journal files generated on the local machine.
+#   runtime: Only open non-persistent journal files.
+#   system: Only open kernel and system service journal files.
+flags: [local]
+
+# [required]
+# *filter* is systemd filter
+#   _exe: "/usr/bin/ruby-mri" will be converted to _EXE=/usr/bin/ruby-mri
+#
+# @see `man 7 systemd.journal-fields`
+filter:
+  _exe: "/usr/bin/ruby-mri"
+
+# [required]
+mail:
+  from:     "myserver@example.com"  # from address
+  to:       "me@example.com"        # to addresses
+  subject:  "[Journald Watcher]"    # subject prefix
+
+# [optional]
+# one of emerg, alert, crit, err, warning, notice, info, debug
+# debug if nothing specified or incorrect
+min_priority: warning
