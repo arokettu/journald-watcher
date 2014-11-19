@@ -20,7 +20,6 @@ mail:
   to:       "me@example.com"        # to addresses
   subject:  "[Journald Watcher]"    # subject prefix
 
-# [optional]
+# [required]
 # one of emerg, alert, crit, err, warning, notice, info, debug
-# debug if nothing specified or incorrect
 min_priority: warning
