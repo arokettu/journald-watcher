@@ -56,7 +56,7 @@ module JournaldWatcher
         when 'debug'
           Systemd::Journal::LOG_DEBUG
         else
-          Systemd::Journal::LOG_DEBUG
+          raise 'Incorrect minimal priority'
       end
     end
   end
