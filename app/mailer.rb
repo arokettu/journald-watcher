@@ -1,5 +1,3 @@
-require 'pry'
-
 module JournaldWatcher
   class Mailer
     def initialize(from, to, subject)
@@ -22,9 +20,7 @@ module JournaldWatcher
       msg.body      = entry.message
       msg.add_file filename: 'data.json', content: entry.to_h.to_json
 
-      binding.pry
-
-      # msg.deliver
+      msg.deliver
     end
   end
 end
