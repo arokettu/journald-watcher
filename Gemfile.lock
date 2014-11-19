@@ -1,0 +1,18 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    daemons (1.1.9)
+    ffi (1.9.6)
+    mail (2.6.3)
+      mime-types (>= 1.16, < 3)
+    mime-types (2.4.3)
+    systemd-journal (1.2.1)
+      ffi (~> 1.9.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  daemons (~> 1.1.9)
+  mail (~> 2.6.3)
+  systemd-journal (~> 1.2.1)
