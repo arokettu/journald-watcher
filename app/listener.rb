@@ -8,6 +8,7 @@ module JournaldWatcher
     def listen(&block)
       @journal.filter @filter
       @journal.seek :tail
+      @journal.move_previous_skip 1 # workaround due to systemd bug, see https://bugzilla.redhat.com/show_bug.cgi?id=979487
       watch { |entry| block.call(entry) }
     end
 
