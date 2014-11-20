@@ -20,6 +20,8 @@ module JournaldWatcher
       msg.body      = entry.message
       msg.add_file filename: 'data.json', content: entry.to_h.to_json
 
+      puts "Delivering #{subject}"
+
       msg.deliver
     end
   end
