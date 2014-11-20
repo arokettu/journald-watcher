@@ -9,8 +9,8 @@ module JournaldWatcher
     def mail_entry(entry)
       subject = entry.message
 
-      if subject.length > 50
-        subject = subject[0..50] + '...'
+      if subject.length > 200
+        subject = subject[0..200] + '...'
       end
 
       msg           = Mail.new
